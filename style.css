@@ -1,0 +1,389 @@
+
+body{
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
+    background-color: darkslategray;
+}
+
+/* Navigation Styling */
+
+nav {
+        
+    background-color: rgb(29, 24, 23);
+    position:fixed;
+    width: 100%;
+    padding: 1rem;
+    top:0;
+    left:0;
+    z-index:1000 ;
+}
+
+nav ul {
+    list-style: none; 
+    padding: 0; 
+    margin: 0;
+    display:flex ;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap: 4rem;
+    font-size: 1rem;
+}
+
+nav li {
+    margin: 0;
+}
+
+.nav-container {
+flex: 1;
+min-width: 0;
+
+}
+
+nav a {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
+    color:white ;
+    text-decoration: solid;
+    padding: 2rem;
+    margin-top: 2rem;
+    position: relative;
+}
+
+nav a:hover {
+    color:darkslategray;
+}
+
+/* Main Header Styling */
+header {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    text-align: center;
+    height:100vh;
+    width:100vw; 
+    color: aliceblue;
+    
+    margin-top: 1rem;
+    padding: 3rem;
+    background-image:url(images/heating.jpg) ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+header::before {
+    content:"";
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+header h1,h2 {
+    z-index: 2;
+}
+
+
+/* Main header Button Style*/
+
+.button-container {
+    position: relative;
+    z-index: 1;
+
+}
+
+
+
+
+button {
+    text-transform: uppercase;
+    position: relative;
+    border:3px solid white;
+    background-color:black;
+    font-size: 18px;
+    outline: none;
+    border-radius: 3px;
+    margin: 0 10px;
+    padding:23px 33px;
+    border: 3px solid transparent;
+}
+
+button:active {
+    transform: translate(3px);
+}
+
+button::after,
+button::after {
+    border-radius: 3px;
+}
+
+.shrink-border {
+    background-color: transparent;
+    color:aliceblue;
+}
+
+.shrink-border:hover {
+    background-color: transparent;
+    box-shadow: none;
+    color:aliceblue
+
+}
+
+.shrink-border::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left: 100%;
+    width: 100%border 3px solid rgb(192, 183, 183);
+    transition: opacity 0.3s, border 0.3s;
+}
+
+.shrink-border:hover::before {
+    opacity: 0;
+}
+
+.shrink-border::after {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 3px solid aliceblue;
+    opacity: 0;
+    z-index: -1;
+    transform: scaleX(1.1) scaleY(1.3);
+}
+
+.shrink-border:hover::after {
+    opacity: 1;
+    transform: scale(1) scale(1);
+
+}
+
+button:hover {
+    color:darkslategray;    
+}
+
+/* Chapter Section Styling */
+
+.chapter-section {
+    text-align: center;
+    border: 5px solid black;
+    padding: 3rem;
+    color:aliceblue;
+    text-align: center;
+    margin: auto;
+    max-width: 1200px;
+    
+}
+
+.chapter-section h3 {
+    font-size: 24px;
+
+}
+
+/* Fooer section Styling */
+
+footer {
+    background-color: black; 
+    padding: 40px;
+    color: aliceblue;
+}
+
+.footer-content {
+    text-align:center;
+    max-width: 1200px;
+    
+    margin:0 auto;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links a {
+    color:aliceblue;
+    text-decoration: none;
+    transform: color 0.3s;
+}
+
+.footer-links a:hover {
+    color:darkslategray;
+    text-decoration: none;
+    transform: color 0.3s;
+}
+
+.footer-social {
+    margin-top: 0;
+}
+
+.footer-social a {
+    color: aliceblue;
+    font-size: 24px;
+    margin:0 10px;
+    text-decoration: 0;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    color:darkslategray;
+}
+
+/* Gallery Section Styles */
+
+#main-gallery-container {
+    margin-top: 100px;
+    margin-bottom: 120px;
+}
+
+#main-gallery-container h2 {
+    text-align: center;
+    color: aliceblue;
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 75vw;
+    margin: 20px auto;
+}
+
+figure {
+    margin: 10px;
+    padding: 0px;
+    position: relative;
+}
+
+figure img {
+    width:100%;
+}
+
+#gallery img {
+    padding: 0px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    border: #fff;
+    box-shadow: 0px 0px 3px aliceblue;
+    z-index: -1;
+}
+
+figcaption {
+    text-align: center;
+    color: aliceblue;
+    width: 100%;
+}
+
+/* Contact form styling */
+
+.contact {
+    margin:200px auto;
+    margin-bottom: 40vh;
+    background-color: rgb(192, 183, 183);
+    padding: 30px;
+    max-width: 800px;
+    box-shadow: 0 4px 15px black;
+    border-radius: 8px;
+}
+
+.contact h2 {
+    color:aliceblue;
+    font-size: 24px;
+    margin-bottom: 20px;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.contact input {
+    font-size: 18px;
+    line-height: 1.6;
+    margin:0 ;
+}
+
+/* Section form styling */
+
+.two-column-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-left: 70px;
+    margin-bottom: 50px;
+}
+
+.column {
+    flex-basis: 50%;
+
+}
+
+.column img {
+    width: 100%;
+    height: auto;
+
+}
+
+.about-section {
+    background-color: rgb(192, 183, 183);
+    padding: 20px;
+    margin: 80px auto;
+    max-width:800px;
+    display: flex;
+
+}
+
+.about-section h2 {
+    font-size: 24px;
+    border-bottom: 2px solid darkslategray;
+    display:inline-block;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    line-height: 1.6;
+    margin-bottom: 0;
+
+}
+
+/* Call to action styling */
+
+.call-to-action {
+
+    background-color: rgb(192, 183, 183);
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+/* Products Styling*/
+
+
+
+.tour-button {
+
+    background-color: aliceblue;
+    
+}
+
+
+/*Tablet Styles*/
+
+@media (max-width:768px) 
+    {nav {
+        padding: 15px;
+        font-size: 1px;
+    }
+    }
+
